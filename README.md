@@ -8,7 +8,7 @@ A SELinux policy inject tool for Android .
 mkdir sepolicy-inject
 cd sepolicy-inject
 git clone git://github.com/heiher/sepolicy-inject jni
-nkd-build
+ndk-build
 ```
 
 ## Authors
