@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <string.h>
+#include <unistd.h>
 
 #ifndef PKGNAME
 #define PKGNAME    hev/htproxy
@@ -72,6 +73,7 @@ native_sepolicy_inject (JNIEnv *env, jobject thiz, jobjectArray args)
 	argv[i] = (char *) (*env)->GetStringUTFChars (env, arg, 0);
     }
 
+    optind = 0;
     ret = main (argc, argv);
 
     for (i = 0; i < argc; i++) {
